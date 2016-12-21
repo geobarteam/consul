@@ -1,0 +1,8 @@
+docker run -t -i -p 8500:8500/tcp -p 53:8600/udp  -e 'CONSUL_LOCAL_CONFIG={\"service\": {\"name\": \"web\", \"tags\": [\"rails\"], \"port\": 80}}' consul 
+
+docker run -d -p 8500:8500/tcp -p 53:8600/udp -v c:/dev/docker/consul/volume/config:/consul/config --net=consul_net --name consul1 --rm consul
+
+//Start a cluster 
+docker run -d -p 8500:8500/tcp -p 53:8600/udp -v c:/dev/docker/consul/volume/config:/consul/config --net=consul_net --name=consul1  consul agent -server -bootstrap-expect=3
+docker run -d --net=consul_net --name=consul2  consul agent -retry-join='172.19.0.2' -server -bootstrap-expect=3
+docker run -d --net=consul_net --name=consul3  consul agent -retry-join='172.19.0.2' -server -bootstrap-expect=3
