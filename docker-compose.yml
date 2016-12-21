@@ -1,0 +1,27 @@
+version: '2'
+
+services: 
+    consul1:
+        container_name: consul1
+        image: consulubuntu
+        command: consul agent -config-dir=/consul/config
+        ports: 
+            - "53:8600/udp"
+            - "8500:8500/tcp"
+        volumes:
+            - c:/dev/docker/consul/volume/config1:/consul/config
+        networks: 
+             consul-net1:
+                ipv4_address: 172.1.0.2
+
+networks: 
+    consul-net1:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+              - subnet: 172.1.0.0/24
+                gateway: 172.1.0.1
+                
+                   
+            
