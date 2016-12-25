@@ -1,5 +1,6 @@
 {
-    "bind_addr": "172.19.0.3",	
+    "bind_addr": "172.1.0.3",
+    "client_addr": "0.0.0.0",
     "datacenter": "dc1",
     "data_dir": "/consul/data",
     "encrypt": "EXz7LFN8hpQ4id8EDYiFoQ==",
@@ -13,7 +14,7 @@
     "skip_leave_on_interrupt": true,
     "rejoin_after_leave": true,
     "retry_join":	[			
-        "172.19.0.2:8301",		
-        "172.19.0.3:8301",		
-        "172.19.0.4:8301"		]	
+        "172.1.0.2",		
+        "172.1.0.3",		
+        "172.1.0.4"		]	
 }
