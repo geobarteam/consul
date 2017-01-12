@@ -1,0 +1,21 @@
+{
+    "bind_addr": "172.1.0.5",
+    "client_addr": "0.0.0.0",
+    "datacenter": "dc1",
+    "data_dir": "/consul/data",
+    "encrypt": "EXz7LFN8hpQ4id8EDYiFoQ==",
+    "log_level": "INFO",
+    "enable_syslog": false,
+    "enable_debug": true,
+    "node_name": "frontend1",
+    "server": false,
+    "rejoin_after_leave": true,
+    "ports": {
+        "dns": 53
+    },
+    "retry_join":	[			
+        "172.1.0.2",		
+        "172.1.0.3",		
+        "172.1.0.4"	
+        ]	
+}
