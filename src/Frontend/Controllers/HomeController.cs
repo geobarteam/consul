@@ -10,7 +10,7 @@ namespace Frontend.Controllers
 {
     public class HomeController : Controller
     {
-        private const string serviceUrlBase = "http://localhost:5000";
+        private const string serviceUrlBase = "http://counter.service.consul:5000";
 
         public async Task<ViewResult> Index()
         {

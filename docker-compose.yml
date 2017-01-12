@@ -1,35 +1,35 @@
 version: '2'
 
 services: 
-    consul1:
-        container_name: consul1
+    backend1:
+        container_name: backend1
         image: geobarteam/aspnetcounterconsul
         command: consul agent -config-dir=/consul/config
         ports: 
             - "53:8600/udp"
             - "8500:8500/tcp"
         volumes:
-            - c:/dev/docker/consul/volume/config1:/consul/config
+            - c:/dev/docker/consul/volume/backend1:/consul/config
         networks: 
              consul-net1:
                 ipv4_address: 172.1.0.2
 
-    consul2:
-        container_name: consul2
+    backend2:
+        container_name: backend2
         image: geobarteam/aspnetcounterconsul
         command: consul agent -config-dir=/consul/config
         volumes:
-            - c:/dev/docker/consul/volume/config2:/consul/config
+            - c:/dev/docker/consul/volume/backend2:/consul/config
         networks: 
                 consul-net1:
                     ipv4_address: 172.1.0.3
 
-    consul3:
-        container_name: consul3
+    backend3:
+        container_name: backend3
         image: geobarteam/aspnetcounterconsul
         command: consul agent -config-dir=/consul/config
         volumes:
-            - c:/dev/docker/consul/volume/config3:/consul/config
+            - c:/dev/docker/consul/volume/backend3:/consul/config
         networks: 
                 consul-net1:
                     ipv4_address: 172.1.0.4
