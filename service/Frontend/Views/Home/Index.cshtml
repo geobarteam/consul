@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model CounterModel
+<div id="container">
+    <form asp-controller="Home" asp-action="Refresh" method="post" class="form-horizontal">
+        <h4>Get Data From Counterservice</h4>
+        <hr />
+        <div class="form-group">
+            <label asp-for="SessionId" class="col-md-2 control-label"></label>
+            <input asp-for="SessionId"/>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-default">Refresh</button>
+            </div>
+        </div>
+    </form>
+</div>

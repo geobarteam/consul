@@ -3,7 +3,7 @@ version: '2'
 services: 
     consul1:
         container_name: consul1
-        image: consulubuntu:latest
+        image: geobarteam/aspnetcounterconsul
         command: consul agent -config-dir=/consul/config
         ports: 
             - "53:8600/udp"
@@ -16,7 +16,7 @@ services:
 
     consul2:
         container_name: consul2
-        image: consulubuntu:latest
+        image: geobarteam/aspnetcounterconsul
         command: consul agent -config-dir=/consul/config
         volumes:
             - c:/dev/docker/consul/volume/config2:/consul/config
@@ -26,7 +26,7 @@ services:
 
     consul3:
         container_name: consul3
-        image: consulubuntu:latest
+        image: geobarteam/aspnetcounterconsul
         command: consul agent -config-dir=/consul/config
         volumes:
             - c:/dev/docker/consul/volume/config3:/consul/config

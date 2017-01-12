@@ -1,2 +1,2 @@
-{"service": {"name": "web", "tags": ["rails"], "port": 80,
-  "check": {"script": "curl localhost >/dev/null 2>&1", "interval": "10s"}}}
+{"service": {"name": "counter", "tags": ["primary"], "port": 5000,
+  "check": {"name": "http", "http": "http://localhost:5000/api/metadata", "interval": "10s"}}}
