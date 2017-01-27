@@ -1,0 +1,6 @@
+cdrecord=cdrecord
+cdrdao=cdrdao
+sox=sox
+mpg123=mpg123
+speed=1
+mkisofs=mkisofs

@@ -14,6 +14,9 @@
     "skip_leave_on_interrupt": true,
     "rejoin_after_leave": true,
     "ui": true,
+    "ports": {
+        "dns": 53
+    },
     "retry_join":	[			
         "172.1.0.2",		
         "172.1.0.3",		
