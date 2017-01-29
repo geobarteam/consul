@@ -10,9 +10,6 @@
     "node_name": "frontend1",
     "server": false,
     "rejoin_after_leave": true,
-    "ports": {
-        "dns": 53
-    },
     "retry_join":	[			
         "172.1.0.2",		
         "172.1.0.3",		
