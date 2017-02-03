@@ -24,6 +24,7 @@ namespace Frontend.Controllers
                 var resp = await response.Content.ReadAsStringAsync();
                 var metadata =  Newtonsoft.Json.JsonConvert.DeserializeObject<Metadata>(resp);
                 model.SessionId = metadata.SessionId;
+                model.IP = metadata.IP;
             }
             
             return View(model);
