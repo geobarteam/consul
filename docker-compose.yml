@@ -20,7 +20,8 @@ services:
         ports: 
             - "8080:8080/tcp"
         volumes:
-            - c:/dev/docker/consul/volume/frontend1:/consul/config
+            - c:/dev/docker/consul/volume/frontend1/config:/consul/config
+            - c:/dev/docker/consul/volume/frontend1/data:/consul/data
         dns: 172.1.0.10 
         networks: 
              consul-net1:
@@ -33,7 +34,8 @@ services:
         ports: 
             - "8500:8500/tcp"
         volumes:
-            - c:/dev/docker/consul/volume/backend1:/consul/config
+            - c:/dev/docker/consul/volume/backend1/config:/consul/config
+            - c:/dev/docker/consul/volume/backend1/data:/consul/data
         networks: 
              consul-net1:
                 ipv4_address: 172.1.0.2
@@ -43,7 +45,8 @@ services:
         image: geobarteam/aspnetcounterconsul
         command: consul agent -config-dir=/consul/config
         volumes:
-            - c:/dev/docker/consul/volume/backend2:/consul/config
+            - c:/dev/docker/consul/volume/backend2/config:/consul/config
+            - c:/dev/docker/consul/volume/backend2/data:/consul/data
         dns: 172.1.0.10 
         networks: 
                 consul-net1:
@@ -54,7 +57,8 @@ services:
         image: geobarteam/aspnetcounterconsul
         command: consul agent -config-dir=/consul/config
         volumes:
-            - c:/dev/docker/consul/volume/backend3:/consul/config
+            - c:/dev/docker/consul/volume/backend3/config:/consul/config
+            - c:/dev/docker/consul/volume/backend3/data:/consul/data
         dns: 172.1.0.10 
         networks: 
                 consul-net1:

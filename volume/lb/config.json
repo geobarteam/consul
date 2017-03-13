@@ -1,0 +1,18 @@
+{
+    "bind_addr": "172.1.0.100",
+    "client_addr": "0.0.0.0",
+    "datacenter": "dc1",
+    "data_dir": "/consul/data",
+    "encrypt": "EXz7LFN8hpQ4id8EDYiFoQ==",
+    "log_level": "INFO",
+    "enable_syslog": false,
+    "enable_debug": true,
+    "node_name": "lb",
+    "server": false,
+    "rejoin_after_leave": true,
+    "retry_join":	[			
+        "172.1.0.2",		
+        "172.1.0.3",		
+        "172.1.0.4"	
+        ]	
+}

@@ -1,0 +1,13 @@
+global
+    maxconn 4096
+
+defaults
+    mode    http
+    timeout connect 5000
+    timeout client  50000
+    timeout server  50000
+
+listen http-in
+    bind *:80{{range service "counter"}}
+    server {{.node}} {{.Address}}:{{.Port}}{{end}}
+    

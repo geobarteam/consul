@@ -1,0 +1,2 @@
+{"service": {"name": "lb", "tags": ["primary"], "port": 80,
+  "check": {"name": "http", "http": "http://localhost/api/metadata", "interval": "10s"}}}

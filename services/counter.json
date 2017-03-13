@@ -1,0 +1,14 @@
+{
+  "ID": "counter",
+  "Name": "redis",
+  "Tags": [
+    "primary"
+  ],
+  "Port": 5000,
+  "Check": 
+   {
+       "name": "http", 
+       "http": "http://localhost:5000/api/metadata", 
+       "interval": "10s"
+   }
+}
