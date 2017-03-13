@@ -1,6 +1,6 @@
 {
   "ID": "counter",
-  "Name": "redis",
+  "Name": "counterService",
   "Tags": [
     "primary"
   ],
@@ -9,6 +9,6 @@
    {
        "name": "http", 
        "http": "http://localhost:5000/api/metadata", 
-       "interval": "10s"
+       "interval": "20s"
    }
 }
