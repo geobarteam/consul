@@ -1,6 +1,6 @@
 {
-  "ID": "counter",
-  "Name": "counterService",
+  "ID": "counterService",
+  "Name": "counter",
   "Tags": [
     "primary"
   ],
@@ -9,6 +9,6 @@
    {
        "name": "http", 
        "http": "http://localhost:5000/api/metadata", 
-       "interval": "20s"
+       "interval": "10s"
    }
 }
