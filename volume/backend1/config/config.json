@@ -1,9 +1,9 @@
 {
     "bind_addr": "172.1.0.2",
     "client_addr": "0.0.0.0",
-    "datacenter": "dc1",
+    "datacenter": "hq",
     "data_dir": "/consul/data",
-    "encrypt": "EXz7LFN8hpQ4id8EDYiFoQ==",
+    "encrypt": "SZYqv/oKdwi4DNVXOWB77g==",
     "log_level": "INFO",
     "enable_syslog": false,
     "enable_debug": true,
@@ -17,6 +17,11 @@
     "ports": {
         "dns": 53
     },
+    "disable_remote_exec": true,
+    "acl_datacenter": "hq",
+    "acl_master_token": "685af0d0-779c-4ad5-8cfd-3ae5f1c40d38",
+    "acl_default_policy": "deny",
+    "acl_down_policy": "deny",
     "retry_join":	[			
         "172.1.0.2",		
         "172.1.0.3",		

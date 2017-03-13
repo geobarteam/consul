@@ -1,0 +1,5 @@
+{
+    "Name": "Administrator",
+    "Type": "client",
+    "Rules": "key \"\"{policy=\"write\"},service \"\"{policy = \"write\"}, event \"\" { policy = \"write\"}, query\"\"{policy=\"read\"}, keyring = \"write\", operator=\"write\""
+}
