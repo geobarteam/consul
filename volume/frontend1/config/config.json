@@ -9,6 +9,7 @@
     "enable_debug": true,
     "node_name": "frontend1",
     "server": false,
+    "ui": true,
     "rejoin_after_leave": true,
     "retry_join":	[			
         "172.1.0.2",		

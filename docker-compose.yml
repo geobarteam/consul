@@ -19,6 +19,7 @@ services:
         command: consul agent -config-dir=/consul/config
         ports: 
             - "8080:8080/tcp"
+            - "8500:8500/tcp"
         volumes:
             - c:/dev/docker/consul/volume/frontend1/config:/consul/config
             - c:/dev/docker/consul/volume/frontend1/data:/consul/data
@@ -32,7 +33,7 @@ services:
         command: consul agent -config-dir=/consul/config
         dns: 172.1.0.10 
         ports: 
-            - "8500:8500/tcp"
+            - "8501:8500/tcp"
         volumes:
             - c:/dev/docker/consul/volume/backend1/config:/consul/config
             - c:/dev/docker/consul/volume/backend1/data:/consul/data
@@ -48,6 +49,8 @@ services:
             - c:/dev/docker/consul/volume/backend2/config:/consul/config
             - c:/dev/docker/consul/volume/backend2/data:/consul/data
         dns: 172.1.0.10 
+        ports: 
+            - "8502:8500/tcp"
         networks: 
                 consul-net1:
                     ipv4_address: 172.1.0.3
@@ -60,6 +63,8 @@ services:
             - c:/dev/docker/consul/volume/backend3/config:/consul/config
             - c:/dev/docker/consul/volume/backend3/data:/consul/data
         dns: 172.1.0.10 
+        ports: 
+            - "8503:8500/tcp"
         networks: 
                 consul-net1:
                     ipv4_address: 172.1.0.4

@@ -1,2 +1,0 @@
-{"service": {"name": "counter", "tags": ["primary"], "port": 5000,
-  "check": {"name": "http", "http": "http://localhost:5000/api/metadata", "interval": "10s"}}}
